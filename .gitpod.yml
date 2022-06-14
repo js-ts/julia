@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: make
+    command: cd examples/src && for f in *.jl; do ../../julia "$f"; done

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="keywords" content="julia, julialang, examples, by example, common, tasks, common tasks, simple, helloworld, hello world, documentation, tutorial">
+      <meta name="description" content="Examples of Common tasks in Julia (Julia Lang)">
+      <meta name="author" content="Samuel Colvin">
+      <title>Julia By Example</title>
+      <link rel="icon" type="image/png" href="static/favicon.ico" />
+      <link href="static/external/css/bootstrap.min.css" rel="stylesheet">
+      <link href="static/pygments.css" rel="stylesheet">
+      <link href="static/juliabyexample.css" rel="stylesheet">
+      <link rel="canonical" href="https://juliabyexample.helpmanual.io/"/>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-62733018-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+  </head>
+  <body data-spy="scroll" data-target=".sidebar">
+
+    <div class="container">
+
+      <div class="navbar navbar-default" role="navigation">
+        <div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Julia By Example</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a class="git-link" href="https://github.com/samuelcolvin/JuliaByExample" data-toggle="tooltip"
+                   data-placement="bottom" target="_blank" title="source">
+                  <img src="static/github.png" alt="Github Link"/>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-9 content">
+          {{ intro }}
+          {{ examples }}
+        </div>
+        <div class="col-sm-3 hidden-xs">
+          <div class="sidebar" data-spy="affix" data-offset-top="150">
+            <ul class="nav sidenav">
+              {% for tag in tags %}
+                <li> <a href="{{ tag.link }}">{{ tag.name }}</a> </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <script src="static/external/js/jquery-1.11.0.min.js"></script>
+      <script src="static/external/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+      $(function () {
+          $('a').tooltip();
+      });
+    </script>
+  </body>
+</html>

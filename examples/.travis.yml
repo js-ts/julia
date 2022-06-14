@@ -1,0 +1,16 @@
+language: julia
+
+os:
+- linux
+
+julia:
+- 1.0
+- 1.3
+
+install:
+- >
+  julia --project=project/ --color=yes --check-bounds=yes -e
+  'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate(); Pkg.build()'
+
+script:
+- xvfb-run julia --project=project/ --color=yes --check-bounds=yes test/runtests.jl
